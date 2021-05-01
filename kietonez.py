@@ -23,7 +23,7 @@ sys.setdefaultencoding('utf8')
 br = mechanize.Browser()
 br.set_handle_robots(False)
 br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(),max_time=1)
-br.addheaders = [('User-Agent','Opera/9.80 (Android; Opera Mini/32.0.2254/85. U; id) Presto/2.12.423 Version/12.16')]
+br.addheaders = [('User-Agent','Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_2 like Mac OS X) AppleWebKit/603.2.4 (KHTML, like Gecko) Mobile/14F89 [FBAN/FBIOS;FBAV/96.0.0.45.70;FBBV/60548545;FBDV/iPhone8,1;FBMD/iPhone;FBSN/iOS;FBSV/10.3.2;FBSS/2;FBCR/o2-de;FBID/phone;FBLC/de_DE;FBOP/5;FBRV/0]')]
 
 #-Keluar-#
 def keluar():
@@ -62,18 +62,18 @@ logo = """\033[1;30m█████████
 \033[1;30m█\033[1;92m▲▲▲▲▲\033[1;92m--  - _ --\033[1;96m═╩╝┴ ┴┴└─┴ ┴   ╚  ╚═╝ \033[1;96m
 \033[1;30m█████████      \033[1;92m«----------✧----------»
 \033[1;30m ██ ██
-\033[1;31m╔════════════════════════════════════════════╗
-\033[1;31m║\033[1;32m* \033[1;93mAuthor  \033[1;93m: \033[1;37m./buikiet SecLinux         \033[1;31m       ║
+\033[1;31m╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+\033[1;31m║\033[1;32m* \033[1;93mAuthor  \033[1;93m: \033[1;37m./buikiet SecLinux         \033[1;31m                            ║
 \033[1;31m║\033[1;32m* \033[1;93mWebsite \033[1;93m: \033[1;37m\033[4mhttps://facebook.com/kietonez\033[0m \033[1;31m           ║
-\033[1;31m║\033[1;32m* \033[1;93mGitHub  \033[1;93m: \033[1;37m\033[4mhttps://github.com/kietstar339\033[0m \033[1;31m   ║
-\033[1;31m║\033[1;32m* \033[1;93mTeam    \033[1;93m: \033[1;37m\033[4mViệt Nam CYBER ERROR SYSTEM\033[0m \033[1;31m   ║
-\033[1;31m╚════════════════════════════════════════════╝"""
+\033[1;31m║\033[1;32m* \033[1;93mGitHub  \033[1;93m: \033[1;37m\033[4mhttps://github.com/kietstar339\033[0m \033[1;31m          ║
+\033[1;31m║\033[1;32m* \033[1;93mTeam    \033[1;93m: \033[1;37m\033[4mViệt Nam CYBER ERROR SYSTEM\033[0m \033[1;31m             ║
+\033[1;31m╚═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝"""
 
 # titik #
 def tik():
 	titik = ['.   ','..  ','... ']
 	for o in titik:
-		print("\r\033[1;91m[●] \033[1;92mLoading \033[1;97m"+o),;sys.stdout.flush();time.sleep(1)
+		print("\r\033[1;91m[●] \033[1;92mLoading \033[1;97m"+o),;sys.stdout.flush();time.sleep(3)
 
 back = 0
 threads = []
@@ -142,7 +142,7 @@ def login():
 		pwd = getpass.getpass('\033[1;95m[+] \033[1;93mPassword \033[1;93m:\033[1;95m ')
 		tik()
 		try:
-			br.open('https://m.facebook.com')
+			br.open('https://d.facebook.com')
 		except mechanize.URLError:
 			print"\n\033[1;91m[!] No connection"
 			keluar()
@@ -177,7 +177,7 @@ def login():
 			print("\n\033[1;91m[!] \033[1;93mAccount Checkpoint")
 			print("\n\033[1;92m[#] Harap Login Ulang !")
 			os.system('rm -rf login.txt')
-			time.sleep(1)
+			time.sleep(5)
 			keluar()
 		else:
 			print("\n\033[1;91m[!] Login Failed")
@@ -228,7 +228,7 @@ def menu():
 		os.system('reset')
 		print"\033[1;91m[!] \033[1;93mAccount Checkpoint"
 		os.system('rm -rf login.txt')
-		time.sleep(1)
+		time.sleep(5)
 		login()
 	except requests.exceptions.ConnectionError:
 		print"\033[1;91m[!] No connection"
@@ -347,7 +347,7 @@ def dump():
 	except IOError:
 		print"\033[1;91m[!] Token not found"
 		os.system('rm -rf login.txt')
-		time.sleep(1)
+		time.sleep(5)
 		login()
 	os.system('reset')
 	print logo
@@ -406,7 +406,7 @@ def id_teman():
 	except IOError:
 		print"\033[1;91m[!] Token not found"
 		os.system('rm -rf login.txt')
-		time.sleep(1)
+		time.sleep(5)
 		login()
 	try:
 		os.mkdir('out')
@@ -514,7 +514,7 @@ def id_member_grup():
 	except IOError:
 		print"\033[1;91m[!] Token not found"
 		os.system('rm -rf login.txt')
-		time.sleep(1)
+		time.sleep(8)
 		login()
 	try:
 		os.mkdir('out')
@@ -572,7 +572,7 @@ def em_member_grup():
 	except IOError:
 		print"\033[1;91m[!] Token not found"
 		os.system('rm -rf login.txt')
-		time.sleep(1)
+		time.sleep(5)
 		login()
 	try:
 		os.mkdir('out')
@@ -700,7 +700,7 @@ def email():
 	except IOError:
 		print"\033[1;91m[!] Token not found"
 		os.system('rm -rf login.txt')
-		time.sleep(1)
+		time.sleep(5)
 		login()
 	try:
 		os.mkdir('out')
