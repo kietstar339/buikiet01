@@ -142,7 +142,7 @@ def login():
 		pwd = getpass.getpass('\033[1;95m[+] \033[1;93mPassword \033[1;93m:\033[1;95m ')
 		tik()
 		try:
-			br.open('https://mbasic.facebook.com')
+			br.open('https://m.facebook.com')
 		except mechanize.URLError:
 			print"\n\033[1;91m[!] No connection"
 			keluar()
